@@ -1,0 +1,91 @@
+/* Estilização da tela de login */
+body {
+    background-color: #111;
+    color: white;
+    font-family: Arial, sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+}
+
+.login-container {
+    position: relative;
+    width: 250px;
+    padding: 20px;
+    background-color: #222;
+    border-radius: 10px;
+    text-align: center;
+    box-shadow: 0 0 15px cyan, 0 0 25px cyan;
+}
+
+h2 {
+    margin-bottom: 20px;
+    color: cyan;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+input {
+    width: 100%;
+    padding: 10px;
+    margin: 10px 0;
+    border: none;
+    outline: none;
+    border-radius: 5px;
+    background-color: #333;
+    color: white;
+}
+
+button {
+    width: 100%;
+    padding: 10px;
+    margin: 10px 0;
+    border: none;
+    outline: none;
+    border-radius: 5px;
+    background-color: cyan;
+    color: black;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+/* Animação do "cometa" */
+.seta {
+    position: absolute;
+    width: 15px;  /* Tamanho maior da bolinha */
+    height: 15px; /* Tamanho maior da bolinha */
+    background: radial-gradient(circle, cyan 50%, transparent 70%);
+    border-radius: 50%;
+    z-index: 2; /* Garantir que a bolinha esteja à frente da cauda */
+    animation: percorrerBorda 3s linear infinite;
+}
+
+/* Animação para a seta seguir a borda */
+@keyframes percorrerBorda {
+    0% {
+        top: -7px; /* Exatamente na borda superior */
+        left: -7px; /* Exatamente na borda esquerda */
+    }
+    25% {
+        top: -7px; /* Exatamente na borda superior */
+        left: calc(100% - 7px); /* Exatamente na borda direita */
+    }
+    50% {
+        top: calc(100% - 7px); /* Exatamente na borda inferior */
+        left: calc(100% - 7px); /* Exatamente na borda direita */
+    }
+    75% {
+        top: calc(100% - 7px); /* Exatamente na borda inferior */
+        left: -7px; /* Exatamente na borda esquerda */
+    }
+    100% {
+        top: -7px; /* Volta à borda superior */
+        left: -7px; /* Volta à borda esquerda */
+    }
+}
