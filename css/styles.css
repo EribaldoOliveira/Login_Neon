@@ -1,0 +1,84 @@
+/* Estilos gerais (igual ao anterior) */
+        body {
+            background-color: #111;
+            color: white;
+            font-family: Arial, sans-serif;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+        }
+
+        .login-container {
+            position: relative;
+            width: 250px;
+            padding: 20px;
+            background-color: #222;
+            border-radius: 10px;
+            text-align: center;
+            box-shadow: 0 0 15px cyan, 0 0 25px cyan;
+        }
+
+        h2 {
+            margin-bottom: 20px;
+            color: cyan;
+        }
+
+        form {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        input {
+            width: 100%;
+            padding: 10px;
+            margin: 10px 0;
+            border: none;
+            outline: none;
+            border-radius: 5px;
+            background-color: #333;
+            color: white;
+        }
+
+        button {
+            width: 100%;
+            padding: 10px;
+            margin: 10px 0;
+            border: none;
+            outline: none;
+            border-radius: 5px;
+            background-color: cyan;
+            color: black;
+            font-weight: bold;
+            cursor: pointer;
+        }
+
+        /* Adicionando a imagem de fundo */
+        .login-container img {
+            width: 100%; /* Ajusta a largura da imagem para ocupar todo o contêiner */
+            height: 150px; /* Define uma altura fixa para a imagem */
+            object-fit: cover; /* Faz a imagem cobrir totalmente o espaço disponível */
+            border-radius: 10px; /* Torna as bordas da imagem arredondadas */
+            margin-bottom: 20px; /* Adiciona um espaçamento abaixo da imagem */
+        }
+
+        /* Animação da bolinha (seta) - sem mudanças */
+        .seta {
+            position: absolute;
+            width: 15px;
+            height: 15px;
+            background: radial-gradient(circle, cyan 50%, transparent 70%);
+            border-radius: 50%;
+            z-index: 2;
+            animation: percorrerBorda 3s linear infinite;
+        }
+
+        @keyframes percorrerBorda {
+            0% { top: -7px; left: -7px; }
+            25% { top: -7px; left: calc(100% - 7px); }
+            50% { top: calc(100% - 7px); left: calc(100% - 7px); }
+            75% { top: calc(100% - 7px); left: -7px; }
+            100% { top: -7px; left: -7px; }
+        }
